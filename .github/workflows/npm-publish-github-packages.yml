@@ -21,8 +21,7 @@ jobs:
       
     - name: Zip the Build
       run: |
-        zip -r PluginCore-netcoreapp3.1.zip ./src/PluginCore/bin/Release/netcoreapp3.1/ 
-        zip -r PluginCore-net5.0.zip ./src/PluginCore/bin/Release/net5.0/
+        zip -r dist.zip ./dist.zip 
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
@@ -35,6 +34,5 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          PluginCore-netcoreapp3.1.zip
-          PluginCore-net5.0.zip
+          dist.zip
           LICENSE 
