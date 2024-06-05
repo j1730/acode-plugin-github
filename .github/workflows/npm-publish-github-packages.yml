@@ -3,12 +3,7 @@
 
 name: Node.js Package
 
-on:
-  push:
-    branches:
-      - develop
-  release:
-    types: [created]
+on:[push]
 
 jobs:
   build:
