@@ -1,4 +1,4 @@
-# Github plugin
+# Github plugin-
 
 Access your gist/repositories without cloning/downloading it. To access search `Github` in command pallete.
 
