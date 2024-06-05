@@ -334,7 +334,7 @@ export default function githubFs(token, settings) {
       async writeFile(data, encoding) {
         await init();
 
-        encoding = settings.value.defaultFileEncoding || 'utf-8';
+        encoding = acode.require('settings').get('defaultFileEncoding') || 'utf-8';
 
         if (encoding) {
           if (data instanceof ArrayBuffer && encodings?.decode) {
