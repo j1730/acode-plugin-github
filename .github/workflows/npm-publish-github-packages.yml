@@ -21,7 +21,7 @@ jobs:
       
     - name: Zip the Build
       run: |
-        zip -r dist.zip ./dist.zip 
+        mv -r ./dist.zip dist1.zip 
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
@@ -34,5 +34,5 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          dist.zip
+          dist1.zip
           LICENSE 
