@@ -13,15 +13,11 @@ jobs:
     - name: Checkout source
       uses: actions/checkout@v2
       
-    - name: Build1
+    - name: npm install
       run: npm install
       
-    - name: Build2
+    - name: npm build
       run: npm run build-release
-      
-    - name: Zip the Build
-      run: |
-        mv ./dist.zip dist1.zip 
       
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
@@ -34,5 +30,5 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          dist1.zip
+          dist.zip
           LICENSE 
